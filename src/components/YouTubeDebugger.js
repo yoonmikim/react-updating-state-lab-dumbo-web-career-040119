@@ -2,16 +2,22 @@
 import React from 'react'
 
 class DigitalClicker extends React.Component {
-  state = {
-    errors: [],
-    user: null,
-    settings: {
-      bitrate: 8,
-      video: {
-        resolution: '1080p'
+  
+   constructor() {
+    super();
+
+    this.state = {
+      errors: [],
+      user: null,
+      settings: {
+        bitrate: 8,
+        video: {
+          resolution: '1080p'
+        }
       }
-    }
+    };
   }
+
   
  this.setState({
       settings: Object.assign({}, this.state.settings, {
