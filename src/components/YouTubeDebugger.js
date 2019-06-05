@@ -19,12 +19,22 @@ class DigitalClicker extends React.Component {
   }
 
   
- this.setState({
-      settings: Object.assign({}, this.state.settings, {
-        video: Object.assign({}, this.state.settings.video, {
+ handleChangeBitrate() {
+    this.setState({
+      settings: {...this.state.settings,
+      bitrate: 12}
+    });
+  };
+
+  handleChangeResolution = () => {
+    this.setState({
+      settings: {
+        ...this.state.settings,
+        video: {
+          ...this.state.settings.video,
           resolution: '720p'
-        })
-      })
+        }
+      }
     });
   
   
